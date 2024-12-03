@@ -10,6 +10,7 @@ body {
     color: white;
     overflow: hidden;
     height: 100vh;
+    background-color: black; /* Set background to black */
 }
 
 /* Moving space background */
@@ -20,22 +21,27 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
-    animation: move-stars 50s linear infinite;
     background: transparent;
 }
 
 #stars {
-    background: url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/background.jpg') repeat top center;
+    background: radial-gradient(white 1px, transparent 1px);
+    background-size: 2px 2px;
+    animation: move-stars 50s linear infinite;
 }
 
 #stars2 {
-    background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat top center;
-    animation-delay: 15s;
+    background: radial-gradient(white 2px, transparent 2px);
+    background-size: 4px 4px;
+    animation: move-stars 100s linear infinite;
+    opacity: 0.5;
 }
 
 #stars3 {
-    background: url('https://www.transparenttextures.com/patterns/tiny-grid.png') repeat top center;
-    animation-delay: 30s;
+    background: radial-gradient(white 3px, transparent 3px);
+    background-size: 6px 6px;
+    animation: move-stars 150s linear infinite;
+    opacity: 0.3;
 }
 
 @keyframes move-stars {
@@ -64,7 +70,7 @@ body {
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 15px 30px;
     margin: 10px;
     display: inline-block;
@@ -85,3 +91,4 @@ footer {
     font-size: 0.9rem;
     opacity: 0.8;
 }
+
